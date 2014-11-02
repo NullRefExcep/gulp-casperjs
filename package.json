@@ -1,0 +1,23 @@
+{
+  "name": "gulp-casperjs",
+  "description": "Gulp plugin for runnig CasperJs tests",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies":{
+  	"through2":"*"
+  },
+  "author": {
+    "name": "Dmytro Karpovych",
+    "email": "ZAYEC77@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NullRefExcep/gulp-casperjs"
+  },
+  "license": "MIT",
+  "keywords": [
+  	"gulp",
+    "gulpplugin",
+    "casperjs"
+  ],
+}
