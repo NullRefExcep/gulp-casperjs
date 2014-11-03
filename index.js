@@ -8,6 +8,8 @@ const PLUGIN_NAME = 'gulp-casper-js';
 function casper(options) {
     options = options || {};
 
+    var cmd = (typeof options.command === 'undefined') ? 'test' : options.command;
+
     var files = [];
 
     var read = function(file, enc, cb) {
@@ -31,7 +33,9 @@ function casper(options) {
     };
 
     var end = function(cb) {
-        var casperChild = spawn('casperjs', ['test'].concat(files));
+        cmd = cmd ? [cmd] : [];
+        
+        var casperChild = spawn('casperjs', cmd.concat(files));
 
         casperChild.stdout.on('data', function(data) {
             var msg = data.toString().slice(0, -1);
