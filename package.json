@@ -1,23 +1,23 @@
 {
-  "name": "gulp-casperjs",
-  "description": "Gulp gulp plugin for running CasperJS scripts",
-  "version": "0.0.2",
-  "main": "index.js",
-  "dependencies":{
-  	"through2":"*"
-  },
-  "author": {
-    "name": "Dmytro Karpovych",
-    "email": "ZAYEC77@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/NullRefExcep/gulp-casperjs"
-  },
-  "license": "MIT",
-  "keywords": [
-  	"gulp",
-    "gulpplugin",
-    "casperjs"
-  ]
+    "name": "gulp-casperjs",
+    "description": "Gulp gulp plugin for running CasperJS scripts",
+    "version": "0.0.2",
+    "main": "index.js",
+    "dependencies": {
+        "through2": "*"
+    },
+    "author": {
+        "name": "Dmytro Karpovych",
+        "email": "ZAYEC77@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/NullRefExcep/gulp-casperjs"
+    },
+    "license": "MIT",
+    "keywords": [
+        "gulp",
+        "gulpplugin",
+        "casperjs"
+    ]
 }
