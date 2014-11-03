@@ -1,6 +1,6 @@
 # gulp-casperjs
 
-A [gulp](https://github.com/gulpjs/gulp) plugin for runnig [CasperJS](https://github.com/n1k0/casperjs) tests
+A [gulp](https://github.com/gulpjs/gulp) plugin for runing [CasperJS](https://github.com/n1k0/casperjs) tests
 
 ## Install
 
