@@ -33,7 +33,7 @@ function casper(options) {
     };
 
     var end = function(cb) {
-        cmd = cmd ? [cmd] : [];
+        cmd = cmd ? cmd.split(' ') : [];
         
         var casperChild = spawn('casperjs', cmd.concat(files));
 
