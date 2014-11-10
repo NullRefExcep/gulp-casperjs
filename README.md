@@ -7,29 +7,25 @@ A [gulp](https://github.com/gulpjs/gulp) plugin for running [CasperJS](https://g
 ```
 npm install --save-dev gulp-casperjs
 ```
-Also CasperJS must be installed globally or in project folder
 
 ## Usages
-
-gulp file (run `casperjs test`):
 
 ```js
 var casperJs = require('gulp-casperjs');
 gulp.task('test', function () {
   gulp.src('Globs of test files')
-    .pipe(casperJs());
+    .pipe(casperJs()); //run casperjs test
 });
 ```
-To change the command (default: `test`) used parameter "command":
+To change the command (default: `test`) use parameter `command`:
 ```js
 var casperJs = require('gulp-casperjs');
 gulp.task('casperCmd', function () {
   gulp.src('test.js')
-    .pipe(casperJs({command:""}));
+    .pipe(casperJs({command:''})); //run capserjs test.js
 });
 ```
-If command has value which cast to false, this parameter will ignored.
-Previous example run `casperjs test.js`
+If command has value which cast to `false`, this parameter will ignored.
 
 ## LICENSE
 
