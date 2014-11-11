@@ -25,6 +25,7 @@ gulp.task('casperCmd', function () {
     .pipe(casperJs({command:''})); //run capserjs test.js
 });
 ```
+Command can be `array` or `string`.
 If command has value which cast to `false`, this parameter will be ignored.
 
 ## LICENSE
