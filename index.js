@@ -42,10 +42,11 @@ function casper(options) {
             gutil.log(PLUGIN_NAME + ':', msg);
         });
 
+        var self = this;
         casperChild.on('close', function(code) {
             var success = code === 0;
             if (!success) {
-                this.emit('error', new PluginError({
+                self.emit('error', new PluginError({
                     plugin: PLUGIN_NAME,
                     message: 'code ' + code
                 }));
