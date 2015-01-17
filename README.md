@@ -28,6 +28,15 @@ gulp.task('casperCmd', function () {
 Command can be `array` or `string`.
 If command has value which cast to `false`, this parameter will be ignored.
 
+To hide output from CasperJS use parameter `outputLog`:
+```js
+var casperJs = require('gulp-casperjs');
+gulp.task('casperCmd', function () {
+  gulp.src('test.js')
+    .pipe(casperJs({outputLog: false})); //CasperJS output not show
+});
+```
+Default value is `true`
 ## LICENSE
 
 The MIT License (MIT)

@@ -10,6 +10,8 @@ function casper(options) {
 
     var cmd = (typeof options.command === 'undefined') ? 'test' : options.command;
 
+    var outputLog = (typeof options.outputLog === 'boolean') ? options.outputLog : true;
+
     var files = [];
 
     var read = function(file, enc, cb) {
@@ -37,10 +39,12 @@ function casper(options) {
 
         var casperChild = spawn('casperjs', cmd.concat(files));
 
-        casperChild.stdout.on('data', function(data) {
-            var msg = data.toString().slice(0, -1);
-            gutil.log(PLUGIN_NAME + ':', msg);
-        });
+        if (outputLog) 
+            casperChild.stdout.on('data', function(data) {
+                var msg = data.toString().slice(0, -1);
+                gutil.log(PLUGIN_NAME + ':', msg);
+            });
+        }
 
         var self = this;
         casperChild.on('close', function(code) {
