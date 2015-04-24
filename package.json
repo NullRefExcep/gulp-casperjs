@@ -19,6 +19,7 @@
     "keywords": [
         "gulp",
         "gulpplugin",
+        "casper",
         "casperjs"
     ]
 }
