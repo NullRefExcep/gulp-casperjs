@@ -22,7 +22,7 @@ To change the command (default: `test`) use parameter `command`:
 var casperJs = require('gulp-casperjs');
 gulp.task('casperCmd', function () {
   gulp.src('test.js')
-    .pipe(casperJs({command:''})); //run capserjs test.js
+    .pipe(casperJs({command:''})); //run casperjs test.js
 });
 ```
 Command can be `array` or `string`.
