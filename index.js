@@ -10,7 +10,7 @@ function casper(options) {
 
     var cmd = (typeof options.command === 'undefined') ? 'test' : options.command;
 
-    var outputLog = (typeof options.outputLog === 'boolean') ? options.outputLog : true;
+    var binPath = (typeof options.binPath === 'undefined') ? 'casperjs' : options.binPath;
 
     var files = [];
 
@@ -37,14 +37,12 @@ function casper(options) {
     var end = function(cb) {
         cmd = cmd ? (Array.isArray(cmd) ? cmd : cmd.split(' ')) : [];
 
-        var casperChild = spawn('casperjs', cmd.concat(files));
+        var casperChild = spawn(binPath, cmd.concat(files));
 
-        if (outputLog) 
-            casperChild.stdout.on('data', function(data) {
-                var msg = data.toString().slice(0, -1);
-                gutil.log(PLUGIN_NAME + ':', msg);
-            });
-        }
+        casperChild.stdout.on('data', function(data) {
+            var msg = data.toString().slice(0, -1);
+            gutil.log(PLUGIN_NAME + ':', msg);
+        });
 
         var self = this;
         casperChild.on('close', function(code) {

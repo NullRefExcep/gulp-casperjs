@@ -17,7 +17,9 @@ gulp.task('test', function () {
     .pipe(casperJs()); //run casperjs test
 });
 ```
+
 To change the command (default: `test`) use parameter `command`:
+
 ```js
 var casperJs = require('gulp-casperjs');
 gulp.task('casperCmd', function () {
@@ -25,18 +27,23 @@ gulp.task('casperCmd', function () {
     .pipe(casperJs({command:''})); //run casperjs test.js
 });
 ```
+
 Command can be `array` or `string`.
 If command has value which cast to `false`, this parameter will be ignored.
 
-To hide output from CasperJS use parameter `outputLog`:
+To set custom path to CasperJS use parameter `binPath`:
+
 ```js
 var casperJs = require('gulp-casperjs');
-gulp.task('casperCmd', function () {
+gulp.task('test', function () {
   gulp.src('test.js')
-    .pipe(casperJs({outputLog: false})); //CasperJS output not show
+    .pipe(casperJs({binPath: './node_modules/casperjs/bin/casperjs'})); //custom path to CasperJs
 });
 ```
-Default value is `true`
+
+Default is `casperjs` (global)
+
+
 ## LICENSE
 
 The MIT License (MIT)
