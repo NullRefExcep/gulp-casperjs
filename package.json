@@ -1,7 +1,7 @@
 {
     "name": "gulp-casperjs",
     "description": "Gulp plugin for running CasperJS scripts",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "main": "index.js",
     "dependencies": {
         "through2": "*",
