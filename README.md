@@ -64,18 +64,18 @@ gulp.task('casperCmd', function () {
 Options are documented in official CasperJS documentation http://docs.casperjs.org
 Possible values are
 
-| Option      | Parameter Name | Possible Values                  |
-|-------------|----------------|----------------------------------|
-| concise     | --concise      |                                  |
-| engine      | --engine       | [phantomjs | slimerjs]           |
-| failFast    | --fail-fast    |                                  |
-| includes    | --includes     | <filename>,<filename>            |
-| logLevel    | --log-level    | [debug | info | warning | error] |
-| noColors    | --no-colors    |                                  |
-| post        | --post         | <filename>                       |
-| pre         | --pre          | <filename>                       |
-| webSecurity | --web-security | no                               |
-| xunit       | --xunit        | <filename>                       |
+| Option      | Parameter Name | Possible Values                       |
+|-------------|----------------|---------------------------------------|
+| concise     | --concise      |                                       |
+| engine      | --engine       | [phantomjs | slimerjs]                |
+| failFast    | --fail-fast    |                                       |
+| includes    | --includes     | <filename>,<filename>                 |
+| logLevel    | --log-level    | `[debug \| info \| warning \| error]` |
+| noColors    | --no-colors    |                                       |
+| post        | --post         | <filename>                            |
+| pre         | --pre          | <filename>                            |
+| webSecurity | --web-security | no                                    |
+| xunit       | --xunit        | <filename>                            |
 
 
 
