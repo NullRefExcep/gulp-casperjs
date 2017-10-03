@@ -67,15 +67,15 @@ Possible values are
 | Option      | Parameter Name | Possible Values                       |
 |-------------|----------------|---------------------------------------|
 | concise     | --concise      |                                       |
-| engine      | --engine       | [phantomjs | slimerjs]                |
+| engine      | --engine       | [phantomjs \| slimerjs]               |
 | failFast    | --fail-fast    |                                       |
-| includes    | --includes     | <filename>,<filename>                 |
+| includes    | --includes     | `<filename>,<filename>`               |
 | logLevel    | --log-level    | `[debug \| info \| warning \| error]` |
 | noColors    | --no-colors    |                                       |
-| post        | --post         | <filename>                            |
-| pre         | --pre          | <filename>                            |
+| post        | --post         | `<filename>`                          |
+| pre         | --pre          | `<filename>`                          |
 | webSecurity | --web-security | no                                    |
-| xunit       | --xunit        | <filename>                            |
+| xunit       | --xunit        | `<filename>`                          |
 
 
 
