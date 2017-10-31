@@ -83,7 +83,7 @@ function casper(options) {
             tempArr = tempArr.concat(args);
         }
 
-        var casperChild = spawn('casperjs', tempArr);
+        var casperChild = spawn(binPath, tempArr);
 
         casperChild.stdout.on('data', function(data) {
             var msg = data.toString().slice(0, -1);
