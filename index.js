@@ -1,7 +1,7 @@
 var through = require('through2');
-var gutil = require('gulp-util');
 var spawn = require('child_process').spawn;
-var PluginError = gutil.PluginError;
+var log = require('fancy-log');
+var PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-casper-js';
 
@@ -87,7 +87,7 @@ function casper(options) {
 
         casperChild.stdout.on('data', function(data) {
             var msg = data.toString().slice(0, -1);
-            gutil.log(PLUGIN_NAME + ':', msg);
+            log(PLUGIN_NAME + ':', msg);
         });
 
         var self = this;
